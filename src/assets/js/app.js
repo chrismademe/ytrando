@@ -50,7 +50,7 @@ function generateURL(event) {
     }
 
     // Generate the URL
-    let url = `https://localhost:5000/play.html?videos=${videoIDs.join(',')}`;
+    let url = `https://ytrando.netlify.app/play.html?videos=${videoIDs.join(',')}`;
 
     // Show the URL to the user
     let input = urlContainer.querySelector('input');
