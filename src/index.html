@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Youtube Randomizer</title>
+        <link rel="stylesheet" href="assets/css/dist/style.css">
+
+        <link rel="shortcut icon" type="image/png" href="/assets/images/icons/favicon.png">
+
+    </head>
+    <body class="bg-gray-200">
+
+        <div class="md:grid md:grid-cols-2 h-screen">
+            <div class="bg-white p-10">
+                <h1 class="text-3xl font-extrabold">Youtube Randomizer</h1>
+                <p class="text-gray-600">Add a list of Youtube Video URLs and we'll generate a link for you - when you visit that link, a random video from your list will be played. Great for stream intro screens and the like.</p>
+
+                <div class="mt-10">
+                    <div id="videos" class="grid grid-cols-1 gap-3">
+                        <video-input class="grid grid-cols-12">
+                            <input class="block col-span-11 border-b-2 py-2" type="text" name="url">
+                            <button data-action="remove" class="flex items-center justify-center">
+                                <svg class="text-red-300 hover:text-red-500 fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                    <title>ionicons-v5-m</title><path d="M289.94,256l95-95A24,24,0,0,0,351,127l-95,95-95-95A24,24,0,0,0,127,161l95,95-95,95A24,24,0,1,0,161,385l95-95,95,95A24,24,0,0,0,385,351Z"/></svg>
+                            </button>
+                        </video-input>
+                    </div>
+
+                    <footer class="flex items-center justify-between mt-8">
+                        <button data-action="add" class="flex items-center rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4" type="button">
+                            <svg class="fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                <title>ionicons-v5-a</title><line x1="256" y1="112" x2="256" y2="400" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="400" y1="256" x2="112" y2="256" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                            <span class="ml-1">Add Video</span>
+                        </button>
+                        <button data-action="generate" class="flex items-center rounded bg-green-500 hover:bg-green-600 text-white py-2 px-4" type="button">
+                            <span class="mr-1">Generate URL</span>
+                            <svg  class="fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                                <title>ionicons-v5-a</title><polyline points="268 112 412 256 268 400" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/><line x1="392" y1="256" x2="100" y2="256" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                        </button>
+                    </footer>
+                </div>
+            </div>
+
+            <div id="url" hidden class="p-10">
+                <h2 class="text-2xl font-extrabold">Your URL is...</h2>
+                <input readonly class="block mt-3 font-mono rounded shadow-lg w-full bg-white py-2 px-4" value="test" onclick="this.select()">
+                <p class="text-gray-700 mt-6">Paste this into your browser and a random video from your list will play.</p>
+            </div>
+        </div>
+
+        <template id="template-video">
+            <input class="block col-span-11 border-b-2 py-2" type="text" name="url">
+            <button data-action="remove" class="flex items-center justify-center" type="button">
+                <svg class="text-red-300 hover:text-red-500 fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                    <title>ionicons-v5-m</title><path d="M289.94,256l95-95A24,24,0,0,0,351,127l-95,95-95-95A24,24,0,0,0,127,161l95,95-95,95A24,24,0,1,0,161,385l95-95,95,95A24,24,0,0,0,385,351Z"/></svg>
+            </button>
+        </template>
+
+        <script src="/assets/js/app.js"></script>
+    </body>
+</html>
