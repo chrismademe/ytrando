@@ -15,7 +15,7 @@
     <body class="bg-gray-200">
 
         <div class="md:grid md:grid-cols-2 h-screen">
-            <div class="bg-white p-10">
+            <div class="bg-white p-10 shadow-xl">
                 <h1 class="text-3xl font-extrabold">Youtube Randomizer</h1>
                 <p class="text-gray-600">Add a list of Youtube Video URLs and we'll generate a link for you - when you visit that link, a random video from your list will be played. Great for stream intro screens and the like.</p>
 
@@ -49,6 +49,18 @@
                 <h2 class="text-2xl font-extrabold">Your URL is...</h2>
                 <input readonly class="block mt-3 font-mono rounded shadow-lg w-full bg-white py-2 px-4" value="test" onclick="this.select()">
                 <p class="text-gray-700 mt-6">Paste this into your browser and a random video from your list will play.</p>
+
+                <div class="mt-12 text-gray-600">
+                    <h3 class="text-lg font-extrabold text-gray-900">Help! Autoplay isn't working</h3>
+                    <p>Modern browsers block Autoplay by default, so you'll need to trust this site in order for it to work. That said, it <em>should</em> work without issue in OBS, which this app was designed for.</p>
+
+                    <h4 class="text-lg text-gray-900 mt-6">Enable Autoplay</h4>
+                    <p class="mt-1">
+                        <a class="inline-block rounded bg-gray-700 hover:bg-gray-800 text-white text-xs py-2 px-3" href="https://www.ghacks.net/2018/02/06/how-to-control-audio-and-video-autoplay-in-google-chrome/" target="_blank" rel="noopener nofollow">Chrome</a>
+                        <a class="inline-block rounded bg-gray-700 hover:bg-gray-800 text-white text-xs py-2 px-3" href="https://support.mozilla.org/en-US/kb/block-autoplay" target="_blank" rel="noopener nofollow">Firefox</a>
+                        <a class="inline-block rounded bg-gray-700 hover:bg-gray-800 text-white text-xs py-2 px-3" href="https://www.pilatesanytime.com/Pilates-Help/1016/How-to-Get-Safari-to-Autoplay-Video-and-Audio-Chapters" target="_blank" rel="noopener nofollow">Safari (Mac)</a>
+                    </p>
+                </div>
             </div>
         </div>
 
