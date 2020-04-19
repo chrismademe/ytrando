@@ -4,6 +4,7 @@ class VideoPlayer extends HTMLElement {
         const videoList = params.has('videos') ? params.get('videos') : null;
 
         if (videoList === null) return;
+        videoList = videoList.replace(/(<([^>]+)>)/gi, ''); // strip html
         let videoID = this.selectRandomVideo(videoList);
         this.render(videoID);
     }
