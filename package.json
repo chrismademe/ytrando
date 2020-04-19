@@ -7,7 +7,8 @@
         "dev": "npm-run-all --parallel serve compileCSS watch",
         "serve": "npx @11ty/eleventy --serve",
         "watch": "gulp watch",
-        "compileCSS": "gulp compileCSS"
+        "compileCSS": "gulp compileCSS",
+        "build": "gulp buildCSS"
     },
     "author": "",
     "license": "ISC",
@@ -22,5 +23,9 @@
         "node-yaml": "^4.0.1",
         "npm-run-all": "^4.1.5",
         "tailwindcss": "^1.2.0"
+    },
+    "devDependencies": {
+        "gulp-purgecss": "^2.1.2",
+        "purgecss": "^2.1.2"
     }
 }
