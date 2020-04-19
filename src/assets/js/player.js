@@ -1,7 +1,7 @@
 class VideoPlayer extends HTMLElement {
     connectedCallback() {
         const params = new URLSearchParams(window.location.search);
-        const videoList = params.has('videos') ? params.get('videos') : null;
+        let videoList = params.has('videos') ? params.get('videos') : null;
 
         if (videoList === null) return;
         videoList = videoList.replace(/(<([^>]+)>)/gi, ''); // strip html
